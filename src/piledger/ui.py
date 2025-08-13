@@ -30,8 +30,10 @@ class UI():
                 break
             
             if choice == "1":
+                print()
                 AcctHandler.handle_balance_inquiry(txns)
             elif choice == "2":
+                print()
                 AcctHandler.display_transactions(txns)
             elif choice == "3":
                 print("\n--- Transactions par compte ---")
@@ -53,12 +55,16 @@ class UI():
                 else:
                     print("Nom de compte invalide!")
             elif choice == "4":
+                print()
                 AcctHandler.display_summary(txns)
             elif choice == "5":
+                print()
                 AcctHandler.handle_statistics(txns)
             elif choice == "6":
+                print()
                 AcctHandler.handle_export(txns)
             elif choice == "7":
+                print()
                 AcctHandler.handle_date_search(txns)
             elif choice == "0":
                 print("\nMerci d'avoir utilisé le système de gestion comptable!")

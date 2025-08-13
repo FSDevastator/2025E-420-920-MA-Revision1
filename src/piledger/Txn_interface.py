@@ -3,8 +3,8 @@ from abc import ABC, abstractmethod
 
 class LedgerTxn(ABC):
     #Simple Ledger transaction interface model
-    def __init__(self,txn_no:int,date:str,account:str,amount:float):
-        self._txn_no=int(txn_no)
+    def __init__(self,txn_no:int,date:str,account:str,amount):
+        self._txn_no=txn_no
         self._date=date
         self._account=account
         self._amount=amount

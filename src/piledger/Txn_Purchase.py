@@ -7,7 +7,7 @@ class PurchaseTxn(LedgerTxn):
         self._invoiceno=invoiceno
         self._supplier=supplier
         self._materials=materials
-         
+          
     @property
     def invoiceno(self):
         return self._invoiceno
