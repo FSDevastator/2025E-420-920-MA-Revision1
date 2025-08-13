@@ -27,14 +27,16 @@ class DataHandler():
                     with open(search_path,'r', encoding='utf-8') as file:
                         reader=csv.DictReader(file)
                         for row in reader:
-                            txn_obj = GeneralTxn()
-                            txn_obj.txn_no=row['No txn']
-                            txn_obj.date=row['Date']
-                            txn_obj.account=row['Compte']
-                            txn_obj.amount=float(row['Montant'])
-                            txn_obj.comment=row['Commentaire']
-                            txns.append(txn_obj)                    
-
+                            
+                            txns.append(
+                                
+                                GeneralTxn(
+                                    int(row['No txn']),
+                                        row['Date'],
+                                        row['Compte'],
+                                        float(row['Montant']),
+                                        row['Commentaire'])
+                            )
                     found_file=True
                     
                     if not txns:

@@ -3,23 +3,36 @@ from abc import ABC, abstractmethod
 
 class LedgerTxn(ABC):
     #Simple Ledger transaction interface model
+    def __init__(self,txn_no:int,date:str,account:str,amount:float):
+        self._txn_no=int(txn_no)
+        self._date=date
+        self._account=account
+        self._amount=amount
 
     @property
-    @abstractmethod
     def txn_no(self):
-        pass
-
+        return self._txn_no
+    @txn_no.setter
+    def txn_no(self,txn_no):
+        self._txn_no=txn_no
+    
     @property
-    @abstractmethod
     def date(self):
-        pass
-
+        return self._date
+    @date.setter
+    def date(self,date):
+        self._date=date
+    
     @property
-    @abstractmethod
     def account(self):
-        pass
-
+        return self._account
+    @account.setter
+    def account(self,account):
+        self._account=account
+    
     @property
-    @abstractmethod
     def amount(self):
-        pass
+        return self._amount
+    @amount.setter
+    def amount(self,amount):
+        self._amount=amount
